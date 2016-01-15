@@ -12,12 +12,12 @@ var myDestinations = {
   ths: {
     name: "Cancun, Mexico",
     description: "All the singles like to go to Cancun, Mexico.",
-    imgURL: "img/breck.jpg"
+    imgURL: "img/cancun.png"
   },
   thcf: {
     name: "Disneyland, Florida",
     description: "Discover the magic of Mickey Mouse.",
-    imgURL: "img/breck.jpg"
+    imgURL: "img/disney.png"
   },
   tc: {
     name: "Breckenridge, Colorado",
@@ -27,22 +27,22 @@ var myDestinations = {
   ahs: {
     name: "Thailand",
     description: "What could be better than the beach in Thailand?",
-    imgURL: "img/breck.jpg"
+    imgURL: "img/thai.jpg"
   },
   ahcf: {
     name: "Australia",
     description: "Take your loved one(s) to Australia, the Land-Down-Under.",
-    imgURL: "img/breck.jpg"
+    imgURL: "img/australia.png"
   },
   acsc: {
     name: "Antartica",
     description: "Is there any place better for adventure than Antartica?",
-    imgURL: "img/breck.jpg"
+    imgURL: "img/polarbear.jpeg"
   },
   acf: {
     name: "Scandanavia",
     description: "Take your family on a great adventure to see northern Europe.",
-    imgURL: "img/breck.jpg"
+    imgURL: "img/scandanavia.png"
   }
 };
 
@@ -203,7 +203,7 @@ $(document).ready(function(){
     // populate results container
     $('#resultLeadIn').append(mySite.userName + ", your ideal travel destination is...");
     $('#resultName').append(result.name);
-    $('#resultDescription').append(result.description);
+    $('#resultDescription').append(result.description + " We will email more info to " + mySite.userEmail);
     $('#resultImg').attr("src", result.imgURL);
     // show results container
     $('#resultsContainer').removeClass('hidden');
@@ -232,7 +232,8 @@ $(document).ready(function(){
     $('#formSix').addClass('hidden');
     $('#formOne').removeClass('hidden');
 
-    // reveal logo
+    // hide reset button
+    $('#beginAgainSubmit').addClass('hidden');
 
     // fix issue with submit not working well
     event.preventDefault();
