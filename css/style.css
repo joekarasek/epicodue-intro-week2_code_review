@@ -1,3 +1,4 @@
+/*Background alignment*/
 html, body {
   height: 100%;
 }
@@ -9,20 +10,26 @@ body {
   background-position: center;
   background-image: url("../img/background.jpg");
 }
-.cover-container {
 
-}
+/*rule used to hide and reveal elements*/
 .hidden {
   display: none;
 }
 
+/*layout of the results*/
 #resultImg {
   width: 80%;
 }
 
-/*.masthead-brand {
-  text-align: center;
-}*/
+.inner {
+  display: inline-block;
+  margin: 50px auto;
+  padding: 0px 20px 10px 20px;
+  border: solid black 1px;
+  background-color: grey;
+  color: black;
+  font-weight: bolder;
+}
 
 form {
   border: solid black 1px;
