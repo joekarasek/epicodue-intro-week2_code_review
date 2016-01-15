@@ -31,7 +31,7 @@ var myDestinations = {
   },
   ahcf: {
     name: "Australia",
-    description: "Take your loved one(s) to Australia, the Land-Down_Under.",
+    description: "Take your loved one(s) to Australia, the Land-Down-Under.",
     imgURL: "img/breck.jpg"
   },
   acsc: {
@@ -201,6 +201,10 @@ $(document).ready(function(){
     $('#resultName').append(result.name);
     $('#resultDescription').append(result.description);
     $('#resultImg').attr("src", result.imgURL);
+
+    //hide the 'reveal results' button and reveal the 'reset' button
+    $('#formFieldSixSubmit').addClass('hidden');
+    $('#beginAgainSubmit').removeClass('hidden');
 
     // fix problem with submit
     event.preventDefault();
