@@ -10,24 +10,39 @@ var myDestinations = {
   // object may catch several possible answer permutations
   //for example, thcf = traditionalist who like hot climates and are either a couple or family
   ths: {
-    name: "Cancun, Mexico"
+    name: "Cancun, Mexico",
+    description: "All the singles like to go to Cancun, Mexico.",
+    imgURL: "img/breck.jpg"
   },
-  disneyLandFlorido: {
-    name: "Disneyland, Florida"
+  thcf: {
+    name: "Disneyland, Florida",
+    description: "Discover the magic of Mickey Mouse.",
+    imgURL: "img/breck.jpg"
   },
   tc: {
     name: "Breckenridge, Colorado",
     description: "Oh so cold and wonderful...",
     imgURL: "img/breck.jpg"
   },
-  disneyLandFlorido: {
-    name: "Disneyland, Florida"
+  ahs: {
+    name: "Thailand",
+    description: "What could be better than the beach in Thailand?",
+    imgURL: "img/breck.jpg"
   },
-  disneyLandFlorido: {
-    name: "Disneyland, Florida"
+  ahcf: {
+    name: "Australia",
+    description: "Take your loved one(s) to Australia, the Land-Down_Under.",
+    imgURL: "img/breck.jpg"
   },
-  disneyLandFlorido: {
-    name: "Disneyland, Florida"
+  acsc: {
+    name: "Antartica",
+    description: "Is there any place better for adventure than Antartica?",
+    imgURL: "img/breck.jpg"
+  },
+  acf: {
+    name: "Scandanavia",
+    description: "Take your family on a great adventure to see northern Europe.",
+    imgURL: "img/breck.jpg"
   }
 };
 
