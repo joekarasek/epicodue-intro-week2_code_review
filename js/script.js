@@ -7,12 +7,16 @@ $(document).ready(function(){
   $('#formFieldOneSubmit').click(function(event){
     // variables
     var userNameInput = $('input#userName').val();
-    // check to make sure a name was entered, then assign assign to global userName
+    // check to make sure a name was entered, then assign input to global userName
     if (userNameInput === "") {
       alert('Please enter a name to continue');
       return;
     } else {
+      // assign value
       mySite.userName = userNameInput;
+      // hide this form and reveal the next one
+      $('#formOne').addClass('hidden');
+      $('#formTwo').removeClass('hidden');
     };
     // fix problem with submit
     event.preventDefault();
@@ -28,6 +32,9 @@ $(document).ready(function(){
       return;
     } else {
       mySite.userEmail = userEmailInput;
+      // hide this form and reveal the next one
+      $('#formTwo').addClass('hidden');
+      $('#formThree').removeClass('hidden');
     };
     // fix problem with submit
     event.preventDefault();
@@ -43,6 +50,9 @@ $(document).ready(function(){
       return;
     } else {
       mySite.userGroupType = userGroupTypeInput;
+      // hide this form and reveal the next one
+      $('#formThree').addClass('hidden');
+      $('#formFour').removeClass('hidden');
     };
     // fix problem with submit
     event.preventDefault();
@@ -58,6 +68,9 @@ $(document).ready(function(){
       return;
     } else {
       mySite.userClimatePreference = userClimatePreferenceInput;
+      // hide this form and reveal the next one
+      $('#formFour').addClass('hidden');
+      $('#formFive').removeClass('hidden');
     };
     // fix problem with submit
     event.preventDefault();
