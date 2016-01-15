@@ -15,8 +15,10 @@ var myDestinations = {
   disneyLandFlorido: {
     name: "Disneyland, Florida"
   },
-  breckenridgeColorado: {
-    name: "Breckenridge, Colorado"
+  tc: {
+    name: "Breckenridge, Colorado",
+    description: "Oh so cold and wonderful...",
+    imgURL: "img/breck.jpg"
   },
   disneyLandFlorido: {
     name: "Disneyland, Florida"
@@ -132,14 +134,20 @@ $(document).ready(function(){
       // branch one, all traditionalist
       if (mySite.userClimatePreference === 'cold') {
         // traditionalist who like it cold
-        alert('You are going skiing');
+        result.name = myDestinations.tc.name;
+        result.description = myDestinations.tc.description;
+        result.imgURL = myDestinations.tc.imgURL;
       } else {
         // traditionalist who like it hot
         if (mySite.userGroupType === 'single') {
-          alert('You are going to Cancun');
+          result.name = myDestinations.ths.name;
+          result.description = myDestinations.ths.description;
+          result.imgURL = myDestinations.ths.imgURL;
         } else {
           // both couple and family groupType
-          alert('You are going to Disneyland');
+          result.name = myDestinations.thcf.name;
+          result.description = myDestinations.thcf.description;
+          result.imgURL = myDestinations.thcf.imgURL;
         };
       };
     } else {
@@ -148,23 +156,35 @@ $(document).ready(function(){
         // adventurers who like it hot
         if (mySite.userGroupType === 'single') {
           //single
-          alert('You are going to Thailand');
+          result.name = myDestinations.ahs.name;
+          result.description = myDestinations.ahs.description;
+          result.imgURL = myDestinations.ahs.imgURL;
         } else {
           //couple and family
-          alert('You are going to Australia');
+          result.name = myDestinations.ahcf.name;
+          result.description = myDestinations.ahcf.description;
+          result.imgURL = myDestinations.ahcf.imgURL;
         };
       } else {
         // adventurers who like it cold
         if (mySite.userGroupType === 'single' || mySite.userGroupType === 'couple') {
           //single or couple
-          alert('You are going to Antartica');
+          result.name = myDestinations.acsc.name;
+          result.description = myDestinations.acsc.description;
+          result.imgURL = myDestinations.acsc.imgURL;
         } else {
           // families
-          alert('You are going to Scandanavia');
+          result.name = myDestinations.acf.name;
+          result.description = myDestinations.acf.description;
+          result.imgURL = myDestinations.acf.imgURL;
         };
       };
     };
 
+    // populate results container
+    $('#resultName').append(result.name);
+    $('#resultDescription').append(result.description);
+    $('#resultImg').attr("src", result.imgURL);
 
     // fix problem with submit
     event.preventDefault();
