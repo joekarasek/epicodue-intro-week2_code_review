@@ -1,7 +1,29 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  background-image: url("../img/background.jpg");
+}
+.cover-container {
+
+}
 .hidden {
   display: none;
 }
 
 #resultImg {
   width: 80%;
+}
+
+/*.masthead-brand {
+  text-align: center;
+}*/
+
+form {
+  border: solid black 1px;
 }

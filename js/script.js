@@ -48,6 +48,15 @@ var myDestinations = {
 
 $(document).ready(function(){
 
+  // event handler form field zero submit - let's get started
+  $('#formZero').click(function(event){
+    // reveal form zero and show form one
+    $('#formZero').addClass('hidden');
+    $('#formOne').removeClass('hidden');
+
+    // fix submit issues
+    event.preventDefault();
+  });
   // event handler form field one submit - user name
   $('#formFieldOneSubmit').click(function(event){
     // variables

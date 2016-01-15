@@ -16,109 +16,125 @@
 	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
-	<div class="container">
-		<h1 id="userName">Welcome to Vacation Picker</h1>
-		<h2>Fill out the questionaire below to find the perfect place to vacation.</h2>
-		<div class="row">
-			<div class="col-md-4">
-				<!-- Forms -->
+	<div class="cover-container">
+		<!-- Old Header -->
+		<!-- <h1 id="userName">Welcome to Vacation Picker</h1>
+		<h2>Fill out the questionaire below to find the perfect place to vacation.</h2> -->
 
-				<!-- Form 1 user Name-->
-				<form id="formOne">
-	  			<div class="form-group">
-				    <label for="userName">Enter your name...</label>
-				    <input type="name" class="form-control" id="userName" placeholder="John Doe">
-				  </div>
-				  <button type="submit" class="btn btn-default" id="formFieldOneSubmit">Submit</button>
-				</form>
-
-				<!-- Form 2 user Email-->
-				<form class="hidden" id="formTwo">
-	  			<div class="form-group">
-				    <label for="email">Enter your email...</label>
-				    <input type="name" class="form-control" id="userEmail" placeholder="John.Doe@mail.com">
-				  </div>
-				  <button type="submit" class="btn btn-default" id="formFieldTwoSubmit">Submit</button>
-				</form>
-
-				<!-- Form 3 group type-->
-				<form  class="hidden" id="formThree">
-					<h3>What best describes your gourp...</h3>
-					<div class="radio">
-					  <label>
-					    <input type="radio" name="optionGroupType" value="single">
-					    Single Adventurer
-					  </label>
-					</div>
-					<div class="radio">
-					  <label>
-					    <input type="radio" name="optionGroupType" value="couple">
-					  	Romantic Get-away
-					  </label>
-					</div>
-					<div class="radio">
-					  <label>
-					    <input type="radio" name="optionGroupType" value="family">
-					    The Whole Family
-					  </label>
-					</div>
-					<button type="submit" class="btn btn-default" id="formFieldThreeSubmit">Submit</button>
-				</form>
-
-				<!-- Form 4 hot or cold -->
-				<form  class="hidden" id="formFour">
-					<h3>What type of climate do you prefer?</h3>
-					<div class="radio">
-						<label>
-							<input type="radio" name="optionClimatePreference" value="cold">
-							I don't mind if its cold...
-						</label>
-					</div>
-					<div class="radio">
-						<label>
-							<input type="radio" name="optionClimatePreference" value="hot">
-							I like the beach...
-						</label>
-					</div>
-					<button type="submit" class="btn btn-default" id="formFieldFourSubmit">Submit</button>
-				</form>
-
-				<!-- Form 5 traditional or adventurist -->
-				<form  class="hidden" id="formFive">
-					<h3>Are you a traditionalist, or do you like adventure?</h3>
-					<div class="radio">
-						<label>
-							<input type="radio" name="optionDisposition" value="traditionalist">
-							I like the classics, I'm a traditionalist...
-						</label>
-					</div>
-					<div class="radio">
-						<label>
-							<input type="radio" name="optionDisposition" value="adventurer">
-							I'm always looking for something new, I'm an adventurer...
-						</label>
-					</div>
-					<button type="submit" class="btn btn-default" id="formFieldFiveSubmit">Submit</button>
-				</form>
-
-				<!-- Calculating results aka "form six" -->
-				<div class="hidden" id="formSix">
-					<h3>Our experts have carefully considered your preferences and have choosen the following destination for you...</h3>
-					<h4>Press the button below to see your results.</h4>
-					<button type="submit" class="btn btn-default" id="formFieldSixSubmit">Reveal Results</button>
-					<button type="submit" class="btn btn-default hidden" id="beginAgainSubmit">Reset and Start Over</button>
-				</div>
-
-			</div>
-			<div class="col-md-8" id="resultsContainer">
-				<!-- Results generated here by js-->
-				<h5 id="resultLeadIn"></h5>
-				<h3 id="resultName"></h3>
-				<img src="" alt="" id="resultImg">
-				<p id="resultDescription"></p>
-
+		<!-- new header		 -->
+		<div class="masthead clearfix">
+			<div class="inner">
+				<h3 class="masthead-brand">Vacation Picker</h3>
 			</div>
 		</div>
+
+		<div class="row">
+		<div class="col-md-4">
+			<!-- Forms -->
+
+			<!-- Form 0 'Let's get started' -->
+			<form id="formZero">
+  			<h3>Click the button below to begin...</h3>
+			  <button type="submit" class="btn btn-default" id="formFieldZeroSubmit">Let's get started</button>
+			</form>
+
+			<!-- Form 1 user Name-->
+			<form class="hidden" id="formOne">
+  			<div class="form-group">
+			    <label for="userName">Enter your name...</label>
+			    <input type="name" class="form-control" id="userName" placeholder="John Doe">
+			  </div>
+			  <button type="submit" class="btn btn-default" id="formFieldOneSubmit">Submit</button>
+			</form>
+
+			<!-- Form 2 user Email-->
+			<form class="hidden" id="formTwo">
+  			<div class="form-group">
+			    <label for="email">Enter your email...</label>
+			    <input type="name" class="form-control" id="userEmail" placeholder="John.Doe@mail.com">
+			  </div>
+			  <button type="submit" class="btn btn-default" id="formFieldTwoSubmit">Submit</button>
+			</form>
+
+			<!-- Form 3 group type-->
+			<form  class="hidden" id="formThree">
+				<h3>What best describes your gourp...</h3>
+				<div class="radio">
+				  <label>
+				    <input type="radio" name="optionGroupType" value="single">
+				    Single Adventurer
+				  </label>
+				</div>
+				<div class="radio">
+				  <label>
+				    <input type="radio" name="optionGroupType" value="couple">
+				  	Romantic Get-away
+				  </label>
+				</div>
+				<div class="radio">
+				  <label>
+				    <input type="radio" name="optionGroupType" value="family">
+				    The Whole Family
+				  </label>
+				</div>
+				<button type="submit" class="btn btn-default" id="formFieldThreeSubmit">Submit</button>
+			</form>
+
+			<!-- Form 4 hot or cold -->
+			<form  class="hidden" id="formFour">
+				<h3>What type of climate do you prefer?</h3>
+				<div class="radio">
+					<label>
+						<input type="radio" name="optionClimatePreference" value="cold">
+						I don't mind if its cold...
+					</label>
+				</div>
+				<div class="radio">
+					<label>
+						<input type="radio" name="optionClimatePreference" value="hot">
+						I like the beach...
+					</label>
+				</div>
+				<button type="submit" class="btn btn-default" id="formFieldFourSubmit">Submit</button>
+			</form>
+
+			<!-- Form 5 traditional or adventurist -->
+			<form  class="hidden" id="formFive">
+				<h3>Are you a traditionalist, or do you like adventure?</h3>
+				<div class="radio">
+					<label>
+						<input type="radio" name="optionDisposition" value="traditionalist">
+						I like the classics, I'm a traditionalist...
+					</label>
+				</div>
+				<div class="radio">
+					<label>
+						<input type="radio" name="optionDisposition" value="adventurer">
+						I'm always looking for something new, I'm an adventurer...
+					</label>
+				</div>
+				<button type="submit" class="btn btn-default" id="formFieldFiveSubmit">Submit</button>
+			</form>
+
+			<!-- Calculating results aka "form six" -->
+			<div class="hidden" id="formSix">
+				<h3>Our experts have carefully considered your preferences and have choosen the following destination for you...</h3>
+				<h4>Press the button below to see your results.</h4>
+				<button type="submit" class="btn btn-default" id="formFieldSixSubmit">Reveal Results</button>
+				<button type="submit" class="btn btn-default hidden" id="beginAgainSubmit">Reset and Start Over</button>
+			</div>
+
+		</div>
+		<div class="col-md-8" id="resultsContainer">
+			<!-- Results generated here by js-->
+			<h5 id="resultLeadIn"></h5>
+			<h3 id="resultName"></h3>
+			<img src="" alt="" id="resultImg">
+			<p id="resultDescription"></p>
+
+		</div>
+
 	</div>
+	<footer></footer>
 </body>
 </html>
