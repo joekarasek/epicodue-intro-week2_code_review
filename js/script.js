@@ -201,7 +201,7 @@ $(document).ready(function(){
     };
 
     // populate results container
-    $('#resultLeadIn').append(mySite.userName + ", your're ideal travel destination is...");
+    $('#resultLeadIn').append(mySite.userName + ", your ideal travel destination is...");
     $('#resultName').append(result.name);
     $('#resultDescription').append(result.description);
     $('#resultImg').attr("src", result.imgURL);
@@ -219,17 +219,20 @@ $(document).ready(function(){
 
   // event handler for reset button
   $('#beginAgainSubmit').click(function(event) {
-    //clear results
 
-    // depopulate results container
+    // depopulate and hide results container
     $('#resultLeadIn').empty();
     $('#resultName').empty();
     $('#resultDescription').empty();
     $('#resultImg').attr("src", "");
+    $('#resultsContainer').addClass('hidden');
+    $('.inner').removeClass('hidden');
 
     // hide form six and reveal form one
     $('#formSix').addClass('hidden');
     $('#formOne').removeClass('hidden');
+
+    // reveal logo
 
     // fix issue with submit not working well
     event.preventDefault();
