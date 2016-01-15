@@ -1,3 +1,7 @@
 .hidden {
   display: none;
 }
+
+#resultImg {
+  width: 80%;
+}

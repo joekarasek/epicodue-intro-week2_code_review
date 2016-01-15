@@ -182,6 +182,7 @@ $(document).ready(function(){
     };
 
     // populate results container
+    $('#resultLeadIn').append(mySite.userName + ", your're ideal travel destination is...");
     $('#resultName').append(result.name);
     $('#resultDescription').append(result.description);
     $('#resultImg').attr("src", result.imgURL);
