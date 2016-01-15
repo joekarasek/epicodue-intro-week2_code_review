@@ -210,4 +210,22 @@ $(document).ready(function(){
     event.preventDefault();
   });
 
+  // event handler for reset button
+  $('#beginAgainSubmit').click(function(event) {
+    //clear results
+
+    // depopulate results container
+    $('#resultLeadIn').empty();
+    $('#resultName').empty();
+    $('#resultDescription').empty();
+    $('#resultImg').attr("src", "");
+
+    // hide form six and reveal form one
+    $('#formSix').addClass('hidden');
+    $('#formOne').removeClass('hidden');
+
+    // fix issue with submit not working well
+    event.preventDefault();
+  });
+
 });
