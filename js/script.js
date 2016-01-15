@@ -104,7 +104,7 @@ $(document).ready(function(){
     event.preventDefault();
   });
 
-  // event handler form field four submit - userGroupType
+  // event handler form field fifth submit - userDisposition
   $('#formFieldFiveSubmit').click(function(event){
     // variables
     var userDispositionInput = $('input[name="optionDisposition"]:checked').val();
@@ -118,6 +118,54 @@ $(document).ready(function(){
       $('#formFive').addClass('hidden');
       $('#formSix').removeClass('hidden');
     };
+    // fix problem with submit
+    event.preventDefault();
+  });
+
+  // event handler form field six submit - determines and reveals results
+  $('#formFieldSixSubmit').click(function(event){
+    // variables
+    var result = {};
+
+    // branching tree to determine results, 7 possible out of 12 permutations
+    if (mySite.userDisposition === "traditionalist") {
+      // branch one, all traditionalist
+      if (mySite.userClimatePreference === 'cold') {
+        // traditionalist who like it cold
+        alert('You are going skiing');
+      } else {
+        // traditionalist who like it hot
+        if (mySite.userGroupType === 'single') {
+          alert('You are going to Cancun');
+        } else {
+          // both couple and family groupType
+          alert('You are going to Disneyland');
+        };
+      };
+    } else {
+      // branch two, all adventurer
+      if (mySite.userClimatePreference === 'hot') {
+        // adventurers who like it hot
+        if (mySite.userGroupType === 'single') {
+          //single
+          alert('You are going to Thailand');
+        } else {
+          //couple and family
+          alert('You are going to Australia');
+        };
+      } else {
+        // adventurers who like it cold
+        if (mySite.userGroupType === 'single' || mySite.userGroupType === 'couple') {
+          //single or couple
+          alert('You are going to Antartica');
+        } else {
+          // families
+          alert('You are going to Scandanavia');
+        };
+      };
+    };
+
+
     // fix problem with submit
     event.preventDefault();
   });
