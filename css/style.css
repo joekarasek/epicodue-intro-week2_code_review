@@ -21,14 +21,24 @@ body {
   width: 80%;
 }
 
-/*sytling for form fields*/
-form {
+/*sytling for form and result fields*/
+form,
+#formSix,
+#resultsContainer {
   color: black;
   border-radius: 10px;
   background-color: grey;
   padding: 5px 15px;
 }
 
+#resultsContainer {
+  margin-top: 20px;
+}
+
+/*fix layout of reset button, was hitting top of page*/
+#beginAgainSubmit {
+  margin-top: 20px;
+}
 
 /*styling for the page logo at top*/
 .inner {

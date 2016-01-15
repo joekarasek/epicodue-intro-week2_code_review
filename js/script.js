@@ -205,9 +205,12 @@ $(document).ready(function(){
     $('#resultName').append(result.name);
     $('#resultDescription').append(result.description);
     $('#resultImg').attr("src", result.imgURL);
+    // show results container
+    $('#resultsContainer').removeClass('hidden');
 
     //hide the 'reveal results' button and reveal the 'reset' button
-    $('#formFieldSixSubmit').addClass('hidden');
+    $('#formSix').addClass('hidden');
+    $('.inner').addClass('hidden');
     $('#beginAgainSubmit').removeClass('hidden');
 
     // fix problem with submit
