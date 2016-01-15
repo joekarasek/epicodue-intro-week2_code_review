@@ -1,5 +1,33 @@
 // object for holding the user input values
 var mySite = {};
+var myDestinations = {
+  // location objects named based on matching qualifiers from the three inputs: groupType, climate, and disposition
+  // groupType can be s for single, c for couple, f for family
+  // climate can be h for hot and c for cold
+  // disposition can be t for traditionalist and a for adventurer
+  // object names are constructed using disposition + climate + groupType
+  // for example, ths = traditionalist who like hot climates and are single
+  // object may catch several possible answer permutations
+  //for example, thcf = traditionalist who like hot climates and are either a couple or family
+  ths: {
+    name: "Cancun, Mexico"
+  },
+  disneyLandFlorido: {
+    name: "Disneyland, Florida"
+  },
+  breckenridgeColorado: {
+    name: "Breckenridge, Colorado"
+  },
+  disneyLandFlorido: {
+    name: "Disneyland, Florida"
+  },
+  disneyLandFlorido: {
+    name: "Disneyland, Florida"
+  },
+  disneyLandFlorido: {
+    name: "Disneyland, Florida"
+  }
+};
 
 $(document).ready(function(){
 
@@ -86,6 +114,9 @@ $(document).ready(function(){
       return;
     } else {
       mySite.userDisposition = userDispositionInput;
+      // hide this form and reveal submit button to see results
+      $('#formFive').addClass('hidden');
+      $('#formSix').removeClass('hidden');
     };
     // fix problem with submit
     event.preventDefault();
