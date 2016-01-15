@@ -21,16 +21,22 @@ body {
   width: 80%;
 }
 
+/*sytling for form fields*/
+form {
+  color: black;
+  border-radius: 10px;
+  background-color: grey;
+  padding: 5px 15px;
+}
+
+
+/*styling for the page logo at top*/
 .inner {
   display: inline-block;
   margin: 50px auto;
   padding: 0px 20px 10px 20px;
-  border: solid black 1px;
+  border-radius: 10px;
   background-color: grey;
   color: black;
   font-weight: bolder;
-}
-
-form {
-  border: solid black 1px;
 }
