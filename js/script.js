@@ -64,7 +64,6 @@ $(document).ready(function(){
     // check to make sure a name was entered, then assign input to global userName
     if (userNameInput === "") {
       alert('Please enter a name to continue');
-      return;
     } else {
       // assign value
       mySite.userName = userNameInput;
@@ -83,7 +82,6 @@ $(document).ready(function(){
     // check to make sure an email was entered, then assign assign to global userEmail
     if (userEmailInput === "") {
       alert('Please enter an email address');
-      return;
     } else {
       mySite.userEmail = userEmailInput;
       // hide this form and reveal the next one
@@ -101,7 +99,6 @@ $(document).ready(function(){
     // check to make sure a name was entered, then assign assign to global userName
     if (userGroupTypeInput === undefined) {
       alert('Please pick one of the options');
-      return;
     } else {
       mySite.userGroupType = userGroupTypeInput;
       // hide this form and reveal the next one
@@ -119,7 +116,6 @@ $(document).ready(function(){
     // check to make sure a name was entered, then assign assign to global userName
     if (userClimatePreferenceInput === undefined) {
       alert('Please pick one of the options');
-      return;
     } else {
       mySite.userClimatePreference = userClimatePreferenceInput;
       // hide this form and reveal the next one
@@ -137,7 +133,6 @@ $(document).ready(function(){
     // check to make sure a name was entered, then assign assign to global userName
     if (userDispositionInput === undefined) {
       alert('Please pick one of the options');
-      return;
     } else {
       mySite.userDisposition = userDispositionInput;
       // hide this form and reveal submit button to see results
