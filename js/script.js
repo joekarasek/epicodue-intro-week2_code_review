@@ -1,5 +1,10 @@
 // object for holding the user input values
-var mySite = {};
+var mySite = {
+  nextForm: function(toHide, toShow) {
+    $(toHide).addClass('hidden');
+    $(toShow).removeClass('hidden');
+  }
+};
 var myDestinations = {
   // location objects named based on matching qualifiers from the three inputs: groupType, climate, and disposition
   // groupType can be s for single, c for couple, f for family
@@ -51,8 +56,7 @@ $(document).ready(function(){
   // event handler form field zero submit - let's get started
   $('#formZero').click(function(event){
     // reveal form zero and show form one
-    $('#formZero').addClass('hidden');
-    $('#formOne').removeClass('hidden');
+    mySite.nextForm('#formZero', '#formOne');
 
     // fix submit issues
     event.preventDefault();
@@ -68,9 +72,8 @@ $(document).ready(function(){
       // assign value
       mySite.userName = userNameInput;
       // hide this form and reveal the next one
-      $('#formOne').addClass('hidden');
-      $('#formTwo').removeClass('hidden');
-    };
+      mySite.nextForm('#formOne', '#formTwo');
+    }
     // fix problem with submit
     event.preventDefault();
   });
@@ -85,9 +88,8 @@ $(document).ready(function(){
     } else {
       mySite.userEmail = userEmailInput;
       // hide this form and reveal the next one
-      $('#formTwo').addClass('hidden');
-      $('#formThree').removeClass('hidden');
-    };
+      mySite.nextForm('#formTwo', '#formThree');
+    }
     // fix problem with submit
     event.preventDefault();
   });
@@ -102,9 +104,8 @@ $(document).ready(function(){
     } else {
       mySite.userGroupType = userGroupTypeInput;
       // hide this form and reveal the next one
-      $('#formThree').addClass('hidden');
-      $('#formFour').removeClass('hidden');
-    };
+      mySite.nextForm('#formThree', '#formFour');
+    }
     // fix problem with submit
     event.preventDefault();
   });
@@ -119,9 +120,8 @@ $(document).ready(function(){
     } else {
       mySite.userClimatePreference = userClimatePreferenceInput;
       // hide this form and reveal the next one
-      $('#formFour').addClass('hidden');
-      $('#formFive').removeClass('hidden');
-    };
+      mySite.nextForm('#formFour', '#formFive');
+    }
     // fix problem with submit
     event.preventDefault();
   });
@@ -136,9 +136,8 @@ $(document).ready(function(){
     } else {
       mySite.userDisposition = userDispositionInput;
       // hide this form and reveal submit button to see results
-      $('#formFive').addClass('hidden');
-      $('#formSix').removeClass('hidden');
-    };
+      mySite.nextForm('#formFive', '#formSix');
+    }
     // fix problem with submit
     event.preventDefault();
   });
@@ -167,8 +166,8 @@ $(document).ready(function(){
           result.name = myDestinations.thcf.name;
           result.description = myDestinations.thcf.description;
           result.imgURL = myDestinations.thcf.imgURL;
-        };
-      };
+        }
+      }
     } else {
       // branch two, all adventurer
       if (mySite.userClimatePreference === 'hot') {
@@ -183,7 +182,7 @@ $(document).ready(function(){
           result.name = myDestinations.ahcf.name;
           result.description = myDestinations.ahcf.description;
           result.imgURL = myDestinations.ahcf.imgURL;
-        };
+        }
       } else {
         // adventurers who like it cold
         if (mySite.userGroupType === 'single' || mySite.userGroupType === 'couple') {
@@ -196,9 +195,9 @@ $(document).ready(function(){
           result.name = myDestinations.acf.name;
           result.description = myDestinations.acf.description;
           result.imgURL = myDestinations.acf.imgURL;
-        };
-      };
-    };
+        }
+      }
+    }
 
     // populate results container
     $('#resultLeadIn').append(mySite.userName + ", your ideal travel destination is...");
